@@ -9,8 +9,7 @@ const Header: React.FC = () => {
   const navLinks = [
     { href: '#about', label: 'About' },
     { href: '#projects', label: 'Projects' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#contact', label: 'Contact' }
+    { href: '#connect', label: 'Connect' },
   ];
 
   const toggleMenu = () => {
@@ -18,14 +17,14 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+    <header className="fixed w-full z-50 backdrop-blur-sm bg-[#ECE7E1] shadow-sm">
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         {/* Logo */}
         <Link 
           href="/" 
-          className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+          className="text-2xl text-transparent bg-clip-text font-custom font-medium text-[#1A1818]"
         >
-          Your Name
+          Goose Tea
         </Link>
 
         {/* Desktop Navigation */}
@@ -34,7 +33,7 @@ const Header: React.FC = () => {
             <Link 
               key={link.href}
               href={link.href}
-              className="text-gray-700 hover:text-blue-600 transition duration-300"
+              className="transition duration-300 font-custom font-medium  text-[#1A1818] hover:text-[#8A8279]"
             >
               {link.label}
             </Link>
@@ -45,7 +44,7 @@ const Header: React.FC = () => {
         <div className="md:hidden">
           <button 
             onClick={toggleMenu}
-            className="text-gray-700 focus:outline-none"
+            className="text-[#1A1818] focus:outline-none bg-[#ECE7E1]"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -54,13 +53,13 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#ECE7E1] shadow-lg">
           <nav className="flex flex-col items-center py-4 space-y-4">
             {navLinks.map((link) => (
               <Link 
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-blue-600 transition duration-300"
+                className="text-[#1A1818] hover:text-blue-600 transition duration-300 font-custom font-medium"
                 onClick={toggleMenu}
               >
                 {link.label}
