@@ -22,7 +22,7 @@ const Header: React.FC = () => {
         {/* Logo */}
         <Link 
           href="/" 
-          className="text-2xl text-transparent bg-clip-text font-custom font-medium text-[#1A1818]"
+          className="text-2xl bg-clip-text font-custom font-medium text-[#1A1818]"
         >
           Goose Tea
         </Link>

@@ -23,71 +23,32 @@ const Hero: React.FC<HeroProps> = ({
   socialLinks
 }) => {
   return (
-    <div 
-      className="relative min-h-screen flex justify-center items-center text-gray-900 px-4 bg-center" 
-      style={{ 
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
+    <div className="relative min-h-screen flex justify-center text-gray-900 px-4 bg-center"
+        style={{ 
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+        }}
     >
       {/* Overlay to improve text readability */}
-      <div className="absolute inset-0 bg-[#ECE7E1]/10"></div>
-
-      <div className="relative max-w-4xl flex flex-col mx-auto text-center z-10">
-        {/* Name and Title */}
-        <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-red-600 font-custom">
-          {name}
-        </h1>
-        <h2 className="text-2xl mb-6 text-gray-700 font-custom">
-          {title}
-        </h2>
-
-        {/* Brief Introduction */}
-        <p className="text-xl mb-8 text-gray-600 max-w-2xl mx-auto font-custom">
-          {introduction}
-        </p>
-
-        {/* Call to Action Buttons */}
-        <div className="flex justify-center space-x-4 mb-8">
-          <a 
-            href="/resume.pdf" 
-            target="_blank" 
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 font-custom"
-          >
-            Download Resume
-          </a>
-          <a 
-            href="#projects" 
-            className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition duration-300 font-custom"
-          >
-            View Projects
-          </a>
-        </div>
-
-        {/* Social Media Icons */}
-        <div className="flex justify-center space-x-6">
-          {socialLinks.github && (
-            <a 
-              href={socialLinks.github} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-gray-900 transition duration-300"
-            >
-              <Github size={32} />
-            </a>
-          )}
-          {socialLinks.linkedin && (
-            <a 
-              href={socialLinks.linkedin} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-gray-900 transition duration-300"
-            >
-              <Linkedin size={32} />
-            </a>
-          )}
-        </div>
+      <div className="w-3/4 relative flex flex-col items-right justify-right z-10">
+          <div className="w-1/2 h-1/2 absolute right-0 text-right">
+              <p className="font-custom text-4xl text-[#ECE7E1] pt-16">
+              Hey there! I'm Gusti, a passionate Machine Learning enthusiast 
+              and web designer with a keen eye for detail. 
+              Beyond crafting websites, I specialize in diverse design projects,
+              including comprehensive branding. 
+              I take pride in my ability to critically evaluate and refine my 
+              work to achieve the highest standards.
+              </p>
+          </div>
+          <div className="w-3/4 h-1/2 absolute bottom-0 left-0 text-left">
+            <ul className="text-8xl absolute bottom-0 pb-16 text-[#ECE7E1] font-custom font-semibold">
+              <li>Machine Learning</li>
+              <li>Designer</li>
+              <li>UI/UX</li>
+            </ul>
+          </div>
       </div>
     </div>
   );
