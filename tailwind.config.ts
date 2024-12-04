@@ -17,6 +17,10 @@ const config: Config = {
       fontFamily: {
         'custom': ['Euclid Circular B', 'sans-serif'],
       },
+      screens: {
+        xs: '960px',
+        s: '1280px',
+      }
     },
   },
   plugins: [],

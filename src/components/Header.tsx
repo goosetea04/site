@@ -7,8 +7,8 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '#about', label: 'About' },
-    { href: '#projects', label: 'Projects' },
+    { href: '/about', label: 'About' },
+    { href: 'projects', label: 'Projects' },
     { href: '#connect', label: 'Connect' },
   ];
 
@@ -17,12 +17,12 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed w-full z-50 backdrop-blur-sm bg-[#ECE7E1] shadow-sm">
+    <header className="fixed w-full z-50 backdrop-blur-sm bg-[#ECE7E1] shadow-sm py-2">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         {/* Logo */}
         <Link 
           href="/" 
-          className="text-2xl bg-clip-text font-custom font-medium text-[#1A1818]"
+          className="text-4xl bg-clip-text font-custom font-medium text-[#1A1818]"
         >
           Goose Tea
         </Link>
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
             <Link 
               key={link.href}
               href={link.href}
-              className="transition duration-300 font-custom font-medium  text-[#1A1818] hover:text-[#8A8279]"
+              className="transition duration-300 font-custom font-medium  text-[#1A1818] hover:text-[#8A8279] text-3xl"
             >
               {link.label}
             </Link>

@@ -1,5 +1,7 @@
 import React from 'react';
 import Hero from '@/components/Hero';
+import Footer from '@/components/Footer';
+
 
 const LandingPage: React.FC = () => {
   return (
@@ -8,7 +10,6 @@ const LandingPage: React.FC = () => {
       title="Software Developer & Designer"
       introduction="Passionate about creating innovative solutions at the intersection of technology and design. I build elegant, efficient, and user-centric digital experiences."
       backgroundImage='/backgroundImage.png'
-      profileImage="/profile-image.jpg"
       socialLinks={{
         github: "https://github.com/goosetea04",
         linkedin: "https://linkedin.com/in/gustirais",
